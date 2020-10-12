@@ -7,9 +7,9 @@ p = length(X);
 n = length(a);
 M = n/3;
 
-fa = ones(p, 1);
+F = ones(p, 1);
 A = reshape(a, 3, M);
-x = X'(ones(M, 1),:);    %copie de la premiere ligne m fois
+x = (X(:,ones(M, 1)))';    %copie de la premiere ligne m fois
 A1 = A(1,:)';
 A1 = A1(:,ones(1,p));   %copie de la premiere colonne n fois
 A2 = A(2,:)';
