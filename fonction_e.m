@@ -8,11 +8,13 @@ function [e,Ge, He]=fonction_e(a, X, Y)
 if nargout == 1
     [F, gradF] = fonction_f(a,X);
     F = F - Y;
+    e = 1/2*norm(F)^2;
 end
 
 if nargout > 1
     [F, gradF] = fonction_f(a,X);
     F = F - Y;
+    e = 1/2*norm(F)^2;
     Ge = gradF'*F;
 end
 
@@ -20,5 +22,3 @@ end
 if nargout == 3
     He = gradF'*gradF;
 end
-
-e = 1/2*norm(F)^2;
