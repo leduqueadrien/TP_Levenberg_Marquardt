@@ -1,6 +1,6 @@
 
 
-function [sg, gradsg]=somme_guaussiennes(a, x)
+function [sg, gradsg]=somme_gaussiennes(a, x)
 %sg valeur en 1 point de la fonction somme guaussiennes
 %gsg gradient selon a
 M = length(a)/3;
